@@ -19,13 +19,13 @@
 #pragma once
 
 // Defined if NVBench has been built with NVML support.
-#cmakedefine NVBENCH_HAS_NVML
+#define NVBENCH_HAS_NVML
 
 // Defined if NVBench has been built with CUPTI support.
-#cmakedefine NVBENCH_HAS_CUPTI
+#define NVBENCH_HAS_CUPTI
 
 #ifdef _MSC_VER
-#define NVBENCH_MSVC_PUSH_DISABLE_WARNING(code)                                \
+#define NVBENCH_MSVC_PUSH_DISABLE_WARNING(code)                                                    \
   __pragma(warning(push)) __pragma(warning(disable : code))
 #define NVBENCH_MSVC_POP_WARNING() __pragma(warning(pop))
 #else
